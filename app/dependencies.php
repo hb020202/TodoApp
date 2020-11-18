@@ -33,5 +33,8 @@ return function (ContainerBuilder $containerBuilder) {
         return $renderer;
     };
 
+
+    $container['HomeController'] = DI\Factory('\App\Factories\HomeControllerFactory');
+
     $containerBuilder->addDefinitions($container);
 };

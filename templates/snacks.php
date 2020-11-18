@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>hatSnek</title>
+    <title>Snacks 4U</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <style>
         body {
@@ -13,7 +13,6 @@
             text-align: center;
             color: #aaa;
             font-size: 18px;
-            background-color: #808080;
         }
 
         h1 {
@@ -27,9 +26,8 @@
     </style>
 </head>
 <body>
-<h1>hatSnek</h1>
-<p>a ToDo app</p>
-<p>Things to do:</p>
-<!--    <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>-->
+<h1>Snacks</h1>
+<div>a microfoodwork for PHP</div>
+    <p>Try <a href="http://www.slimframework.com">SnackFramework</a></p>
 </body>
 </html>

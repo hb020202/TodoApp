@@ -29,7 +29,7 @@
 <body>
 <h1>hatSnek</h1>
 <p>a ToDo app</p>
-<p>Things to do:</p>
+<p>Things done:</p>
 <!--    <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>-->
 </body>
 </html>
