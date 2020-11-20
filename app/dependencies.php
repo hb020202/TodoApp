@@ -35,7 +35,7 @@ return function (ContainerBuilder $containerBuilder) {
 
 
     $container['PDO'] = function (ContainerInterface $container) {
-        $pdo = new PDO('mysql:host=127.0.0.1;dbname=todo', 'root', 'password');
+        $pdo = new PDO('mysql:host=127.0.0.1; dbname=todo', 'root', 'password');
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         return $pdo;
     };
@@ -43,6 +43,11 @@ return function (ContainerBuilder $containerBuilder) {
 
     $container['HomeController'] = DI\Factory('\App\Factories\HomeControllerFactory');
     $container['CompletedController'] = DI\Factory('\App\Factories\CompletedControllerFactory');
+    $container['TodoController'] = DI\Factory('\App\Factories\TodoControllerFactory');
+    $container['TodoModel'] = DI\Factory('\App\Factories\TodoModelFactory');
+
+
+
 
     $containerBuilder->addDefinitions($container);
 };

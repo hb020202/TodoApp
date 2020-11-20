@@ -9,7 +9,28 @@ class TodoModel
         $this->db = $db;
     }
 
-    public function getBlogs(): array
+    public function getTodos(): array
+    {
+        $query = $this->db->prepare('SELECT `desc` FROM `todos`');
+        $query->execute();
+        return $query->fetchAll();
+    }
+
+    public function getCompTodos(): array
+    {
+        $query = $this->db->prepare('SELECT `desc` FROM `todos` WHERE `comp`=1;');
+        $query->execute();
+        return $query->fetchAll();
+    }
+
+    public function getUncompTodos(): array
+    {
+        $query = $this->db->prepare('SELECT `desc` FROM `todos` WHERE `comp`=0;');
+        $query->execute();
+        return $query->fetchAll();
+    }
+
+    public function addTodos(): array
     {
         $query = $this->db->prepare('SELECT * FROM `todos`');
         $query->execute();

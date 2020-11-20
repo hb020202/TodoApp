@@ -1,8 +1,12 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>hatSnek</title>
+    <title>todo</title>
     <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <style>
         body {
@@ -27,9 +31,16 @@
     </style>
 </head>
 <body>
-<h1>hatSnek</h1>
+<h1>todo</h1>
 <p>a ToDo app</p>
 <p>Things to do:</p>
-<!--    <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>-->
+<ul>
+    <?php foreach ($data as $item ){ ?>
+        <li><?php echo $item['desc']; ?>
+    <?php } ?>
+<!--    --><?php //var_dump($data); ?>
+
+</ul>
+
 </body>
 </html>

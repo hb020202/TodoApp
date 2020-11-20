@@ -30,6 +30,9 @@
 <h1>hatSnek</h1>
 <p>a ToDo app</p>
 <p>Things done:</p>
-<!--    <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>-->
-</body>
+<ul>
+    <?php foreach ($data as $item ){ ?>
+    <li><?php echo $item['desc']; ?>
+        <?php } ?>
+</ul></body>
 </html>

@@ -8,7 +8,7 @@ return function (App $app) {
     $container = $app->getContainer();
 
     $app->get('/', 'HomeController');
-
+    $app->get('/comp/', 'CompletedController');
 
 //        function ($request, $response, $args) use ($container) {
 //        $renderer = $container->get('renderer');
@@ -21,30 +21,24 @@ return function (App $app) {
 
 
 
-    $app->get('/snacks', function ($request, $response, $args) use ($container) {
-        $renderer = $container->get('renderer');
-        return $renderer->render($response, "snacks.php", $args);
-    });
-
-    $app->get('/snaacks[/{snack}]', function ($request, $response, $args) use ($container) {
-        var_dump($args);
-        $renderer = $container->get('renderer');
-        return $renderer->render($response, "snacks.php", $args);
-    });
-
-
-
-
-
-
-    $app->get('/books/{book}', function ($request, $response, $args) use ($container) {
-        $renderer = $container->get('renderer');
-        return $renderer->render($response, "index.php", $args);
-    });
-
-
-    $app->post('/form-example', function ($request, $response, $args) use ($container) {
-
-        var_dump($request->getParsedBody());
-    });
+//    $app->get('/snacks', function ($request, $response, $args) use ($container) {
+//        $renderer = $container->get('renderer');
+//        return $renderer->render($response, "snacks.php", $args);
+//    });
+//
+//    $app->get('/snaacks[/{snack}]', function ($request, $response, $args) use ($container) {
+//        var_dump($args);
+//        $renderer = $container->get('renderer');
+//        return $renderer->render($response, "snacks.php", $args);
+//    });
+//
+//    $app->get('/books/{book}', function ($request, $response, $args) use ($container) {
+//        $renderer = $container->get('renderer');
+//        return $renderer->render($response, "index.php", $args);
+//    });
+//
+//    $app->post('/form-example', function ($request, $response, $args) use ($container) {
+//
+//        var_dump($request->getParsedBody());
+//    });
 };
