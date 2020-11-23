@@ -30,10 +30,11 @@ class TodoModel
         return $query->fetchAll();
     }
 
-    public function addTodos(): array
+    public function addTodos(): void
     {
-        $query = $this->db->prepare('SELECT * FROM `todos`');
-        $query->execute();
-        return $query->fetchAll();
+            $query = $this->db->prepare('INSERT INTO `todos` (desc, comp) VALUES (:desc, 0);');
+            $active_query = $this->db->prepare($query);
+            $active_query->bindParam(":desc", $_POST['desc'], PDO::PARAM_STR);
+            $active_query->execute();
+        }
     }
-}

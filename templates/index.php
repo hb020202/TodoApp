@@ -28,19 +28,33 @@
             font-weight: 200;
             margin-bottom: 0;
         }
+        li {
+            list-style: none;
+        }
     </style>
 </head>
 <body>
 <h1>todo</h1>
-<p>a ToDo app</p>
 <p>Things to do:</p>
 <ul>
     <?php foreach ($data as $item ){ ?>
         <li><?php echo $item['desc']; ?>
     <?php } ?>
-<!--    --><?php //var_dump($data); ?>
 
 </ul>
+
+
+<form method="post">
+    <div class="form1">
+        <div>
+            <label for="desc_input">Add a new thing:</label>
+        </div>
+        <input id="desc_input" name="desc_input" type="text" required="">
+    </div>
+    <div>
+        <input type="submit" name="add_todo" value="Add Todo">
+    </div>
+</form>
 
 </body>
 </html>

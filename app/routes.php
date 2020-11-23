@@ -8,6 +8,7 @@ return function (App $app) {
     $container = $app->getContainer();
 
     $app->get('/', 'HomeController');
+    $app->post('/', 'HomeController');
     $app->get('/comp/', 'CompletedController');
 
 //        function ($request, $response, $args) use ($container) {
